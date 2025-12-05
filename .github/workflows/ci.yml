@@ -39,5 +39,6 @@ jobs:
         with:
           go-version-file: "go.mod"
       - run: |
-          ./etc/update-goose.sh
+          git clone --depth=1 https://github.com/mit-pdos/go-journal ~/go-journal
+          ./etc/update-goose.sh ~/go-journal
           git diff --exit-code
