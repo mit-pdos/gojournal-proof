@@ -13,7 +13,7 @@ depends: [
 ]
 
 pin-depends: [
-  ["perennial-old.dev"             "https://github.com/mit-pdos/perennial#4fdcb887ea"]
+  ["perennial-old.dev"             "https://github.com/mit-pdos/perennial#4a264ce697"]
 ]
 
 build: [make "-j%{jobs}%"]
