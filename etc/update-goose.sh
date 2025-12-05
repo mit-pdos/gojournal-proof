@@ -18,5 +18,4 @@ fi
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd "$DIR/.."
 
-go run github.com/goose-lang/goose/cmd/goose@v0.9.3 \
-  -out external/Goose -dir "$GO_JOURNAL_PATH" ./...
+go tool goose -out external/Goose -dir "$GO_JOURNAL_PATH" ./...
