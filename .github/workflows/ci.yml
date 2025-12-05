@@ -23,9 +23,10 @@ jobs:
           rocq-version: "${{ matrix.rocq-version }}"
       - name: Install dependencies
         run: |
+          opam pin add --no-action .
           opam install --deps-only .
       - name: Rocq build
-        run: make
+        run: make -j4
       - name: opam install
         run: opam install --assume-built .
       - name: opam uninstall
