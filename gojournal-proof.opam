@@ -1,0 +1,23 @@
+opam-version: "2.0"
+license: "MIT"
+maintainer: "AUTHOR"
+authors: "AUTHOR"
+homepage: "https://foo"
+bug-reports: "https://foo/issues"
+dev-repo: "git+https://foo.git"
+version: "dev"
+synopsis: "SYNOPSIS"
+
+depends: [
+  "perennial-old"
+]
+
+pin-depends: [
+  #["perennial-old.dev"             "https://github.com/mit-pdos/perennial"]
+]
+
+build: [make "-j%{jobs}%"]
+install: ["go" "tool" "perennial-cli" "install"]
+build-env: [
+  [GOCACHE = "%{build}%/_build/.gocache"]
+]
