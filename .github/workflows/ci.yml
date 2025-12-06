@@ -1,7 +1,5 @@
 name: CI
 
-permissions: read-all
-
 on:
   - push
 
@@ -15,8 +13,6 @@ jobs:
           go-version-file: "go.mod"
       - name: Install Rocq
         uses: tchajed/setup-rocq@v1
-        with:
-          rocq-version: latest
       - name: Install dependencies
         run: |
           opam pin add --no-action .
@@ -27,6 +23,7 @@ jobs:
         run: opam install --assume-built .
       - name: opam uninstall
         run: opam uninstall .
+
   check-goose:
     runs-on: ubuntu-latest
     steps:
