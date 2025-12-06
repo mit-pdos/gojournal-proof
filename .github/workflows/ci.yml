@@ -39,5 +39,6 @@ jobs:
       - name: check goose output
         run: |
           git clone --depth=1 https://github.com/mit-pdos/go-journal ~/go-journal
-          ./etc/update-goose.sh ~/go-journal
+          git clone --depth=1 https://github.com/mit-pdos/go-nfsd ~/go-nfsd
+          ./etc/update-goose.sh --go-journal ~/go-journal --go-nfsd ~/go-nfsd
           git diff --exit-code
