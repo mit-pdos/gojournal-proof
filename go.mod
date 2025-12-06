@@ -11,8 +11,7 @@ require (
 	github.com/bahlo/generic-list-go v0.2.0 // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/fatih/color v1.18.0 // indirect
-	github.com/goose-lang/goose v0.10.0 // indirect
-	github.com/goose-lang/goose/testdata/examples v0.0.0-20251125172247-d9c56ef4f4e1 // indirect
+	github.com/goose-lang/goose v0.9.3 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
