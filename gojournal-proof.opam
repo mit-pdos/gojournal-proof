@@ -6,7 +6,7 @@ homepage: "https://github.com/mit-pdos/gojournal-proof"
 bug-reports: "https://github.com/mit-pdos/gojournal-proof/issues"
 dev-repo: "git+https://github.com/mit-pdos/gojournal-proof.git"
 version: "dev"
-synopsis: "Verification of gojournal"
+synopsis: "Program proofs for gojournal"
 
 depends: [
   "perennial-old"
@@ -23,8 +23,5 @@ pin-depends: [
   ## end
 ]
 
-build: [make "-j%{jobs}%"]
-install: ["go" "tool" "perennial-cli" "install"]
-build-env: [
-  [GOCACHE = "%{build}%/_build/.gocache"]
-]
+build: ["dune" "build"]
+install: ["dune" "install"]
